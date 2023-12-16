@@ -1,10 +1,19 @@
+import './App.css';
 import React from 'react';
-function App() {
+import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-dom';
+import Signup from './Components/Signup';
+import Signin from './Components/Singin';
+// import { Signin } from './Components/Singin'
+// import {Routes, Route} from 'react-router-dom';
+const App = () => {
   return (
-    <div className="App">
-      <h1> project will start soon </h1>
-      <h2>HI dodo Abdullah here</h2>
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/signup" component={Signup} />
+        <Route path="/signin" component={Signin} />
+        <Redirect from="/" to="/signup" />
+      </Switch>
+    </Router>
   );
 }
 export default App;
