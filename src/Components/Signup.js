@@ -24,13 +24,13 @@ const Signup = ({ history }) => {
     <div className='Sign_up_form container'>
       <h2>Create An Account</h2>
       
-      <input type="text" value={fullName} placeholder='Full Name' onChange={(e) => setFullName(e.target.value)} />
+      <input type="text" required value={fullName} placeholder='Full Name' onChange={(e) => setFullName(e.target.value)} />
 
-      <input type="email" value={email} placeholder='Email Address' onChange={(e) => setEmail(e.target.value)} />
+      <input type="email" required value={email} placeholder='Email Address' onChange={(e) => setEmail(e.target.value)} />
     
-      <input type="password" value={password} placeholder='Password' onChange={(e) => setPassword(e.target.value)} />
+      <input type="password" required value={password} placeholder='Password' onChange={(e) => setPassword(e.target.value)} />
     
-      <input type="password" value={confirmPassword} placeholder='Confirm Password' onChange={(e) => setConfirmPassword(e.target.value)} />
+      <input type="password" required value={confirmPassword} placeholder='Confirm Password' onChange={(e) => setConfirmPassword(e.target.value)} />
 
       <input type="checkbox" checked={agreement} onChange={() => setAgreement(!agreement)}/>
     
