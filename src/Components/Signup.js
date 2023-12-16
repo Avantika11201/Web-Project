@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import '../assets/css/Signup.css' ;
 const Signup = ({ history }) => {
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
@@ -19,7 +19,7 @@ const Signup = ({ history }) => {
   };
 
   return (
-    <div>
+    <div className='Sign_up_form'>
       <h2>Signup</h2>
       <label>
         Full Name:

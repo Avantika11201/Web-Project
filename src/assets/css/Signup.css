@@ -1,3 +1,12 @@
-.card {
-    border-radius: 15px;
+.Sign_up_form {
+    background-color: #F6FBF9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 50px 50px;
+    margin: 200px auto;
+    width: fit-content;
+    border-radius: 50px;
+
 }
