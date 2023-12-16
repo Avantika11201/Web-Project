@@ -3,6 +3,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-dom';
 import Signup from './Components/Signup';
 import Signin from './Components/Singin';
+import { Business } from './Components/Business';
 // import { Signin } from './Components/Singin'
 // import {Routes, Route} from 'react-router-dom';
 const App = () => {
@@ -13,7 +14,9 @@ const App = () => {
         <Route path="/signin" component={Signin} />
         <Redirect from="/" to="/signup" />
       </Switch>
+      <Business />
     </Router>
+    
   );
 }
 export default App;
