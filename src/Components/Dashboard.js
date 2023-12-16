@@ -5,7 +5,9 @@ import '../assets/css/Dashboard.css';
 export const Dashboard=() => {
     return (
         <>
-        
+            <div>
+                
+            </div>
         </>
     )
 } 
