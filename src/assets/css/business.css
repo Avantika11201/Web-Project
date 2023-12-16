@@ -11,3 +11,13 @@
     width: fit-content;
     border-radius: 50px;
 }
+.dsiplay_business{
+    background-color: #F6FBF9;
+    width: 65%;
+    padding: 20px;
+    align-self: center;
+    margin-bottom: 30px;
+    box-shadow: -10px 8px 7px rgba(0,0,0,.1);
+    text-align: left;
+    border-radius: 10px;
+}

@@ -50,20 +50,18 @@ export const Business = ()=>{
                     <div className="col">
                         {/* using context api the display */}
                         <div className="dsiplay_business">
-                            <p><strong>Business Name: </strong> {input1}</p>
-                            <p><strong>Business Type: </strong> {input2}</p>
-                            <p><strong>NTN #: </strong> {input3}</p>
-                            <p><strong>Invoice #: </strong> {input4}</p>
-                            <p><strong>Operator Name: </strong> {input5}</p>
-                            <p><strong>Client Type: </strong> {input6}</p>
+                            <div className="rounded border">
+                                <h1 className="text-center">{input1}</h1>
+                                <h6 className="text-center">NTN # {input3}</h6>
+                            </div>
+                            <h5 className="text-center mt-1">Sales Receipt</h5>
+                            <div className="border rounded px-3">
+                                <p><strong>Business Type: </strong> {input2}</p>
+                                <p><strong>Invoice #: </strong> {input4}</p>
+                                <p><strong>Operator Name: </strong> {input5}</p>
+                                <p><strong>Client Type: </strong> {input6}</p>
+                            </div>
                         </div>
-                            {/* <h1>{ input1 }</h1>
-                            <h1>{ input2 }</h1>
-                            <h1>{ input3 }</h1>
-                            <h1>{ input4 }</h1>
-                            <h1>{ input5 }</h1>
-                            <h1>{ input6 }</h1> */}
-                        {/* </div> */}
                     </div>
                 </div>
             </div>
