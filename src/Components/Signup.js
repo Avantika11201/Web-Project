@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../assets/css/Signup.css' ;
+
+
 const Signup = ({ history }) => {
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
@@ -19,40 +21,23 @@ const Signup = ({ history }) => {
   };
 
   return (
-    <div className='Sign_up_form'>
-      <h2>Signup</h2>
-      <label>
-        Full Name:
-        <input type="text" value={fullName} onChange={(e) => setFullName(e.target.value)} />
-      </label>
-      <label>
-        Email:
-        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-      </label>
-      <label>
-        Password:
-        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-      </label>
-      <label>
-        Confirm Password:
-        <input
-          type="password"
-          value={confirmPassword}
-          onChange={(e) => setConfirmPassword(e.target.value)}
-        />
-      </label>
-      <label>
-        Agree to terms:
-        <input
-          type="checkbox"
-          checked={agreement}
-          onChange={() => setAgreement(!agreement)}
-        />
-      </label>
-      <button onClick={handleSignup} disabled={!agreement}>
-        Signup
-      </button>
-      <p>
+    <div className='Sign_up_form container'>
+      <h2>Create An Account</h2>
+      
+      <input type="text" value={fullName} placeholder='Full Name' onChange={(e) => setFullName(e.target.value)} />
+
+      <input type="email" value={email} placeholder='Email Address' onChange={(e) => setEmail(e.target.value)} />
+    
+      <input type="password" value={password} placeholder='Password' onChange={(e) => setPassword(e.target.value)} />
+    
+      <input type="password" value={confirmPassword} placeholder='Confirm Password' onChange={(e) => setConfirmPassword(e.target.value)} />
+
+      <input type="checkbox" checked={agreement} onChange={() => setAgreement(!agreement)}/>
+    
+      <p className='agreement_text'>Agree to Terms and Conditions</p>
+
+      <button onClick={handleSignup} disabled={!agreement}> Create Account </button>
+      <p className='signin_link'>
         Already have an account? <Link to="/signin">Signin here</Link>
       </p>
     </div>
