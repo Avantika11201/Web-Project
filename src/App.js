@@ -4,7 +4,8 @@ import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-d
 import Signup from './Components/Signup';
 import Signin from './Components/Singin';
 import { Business } from './Components/Business';
-import { Product } from './Components/Products'
+import { Product } from './Components/Products';
+import { Dashboard } from './Components/Dashboard';
 // import { Signin } from './Components/Singin'
 // import {Routes, Route} from 'react-router-dom';
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
       </Switch>
       <Business />
       <Product />
+      <Dashboard />
     </Router>
     
   );

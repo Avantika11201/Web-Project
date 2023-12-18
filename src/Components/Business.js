@@ -1,7 +1,17 @@
-import React ,{useState} from "react";
+import React ,{createContext, useState} from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../assets/css/business.css'
-export const Business = ()=>{
+// import '../assets/css/business.css'
+import { Dashboard } from "./Dashboard";
+import { useContext } from "react";
+import { store } from "../store/store";
+
+
+const businessName= createContext();
+const ntnNumber = createContext();
+ export const Business = ()=>{
+
+    const { setInputs } = useContext(store);
+
     const[input1, setinput1]=useState('');
     const[input2, setinput2]=useState('');
     const[input3, setinput3]=useState('');
@@ -9,14 +19,18 @@ export const Business = ()=>{
     const[input5, setinput5]=useState('');
     const[input6, setinput6]=useState(''); 
 
+    
+
     const field1=(e)=>{
         setinput1(e.target.value)
+        setInputs({input1: e.target.value});
     }
     const field2=(e)=>{
         setinput2(e.target.value)
     }
     const field3=(e)=>{
         setinput3(e.target.value)
+        setInputs({input3: e.target.value});
     }
     const field4=(e)=>{
         setinput4(e.target.value)
@@ -27,6 +41,11 @@ export const Business = ()=>{
     const field6=(e)=>{
         setinput6(e.target.value)
     }
+    
+
+    
+    
+
     return(
         <>
             <div className="container">
@@ -40,12 +59,8 @@ export const Business = ()=>{
                             <input type="text" onChange={field4} required placeholder="Invoice #" />
                             <input type="text" onChange={field5} required placeholder="Operator Name" />
                             <input type="text" onChange={field6} required placeholder="Client Type" />
-
                             <button>Next</button>
-                            
                         </form>
-                        
-
                     </div>
                     <div className="col">
                         {/* using context api the display */}
@@ -53,6 +68,8 @@ export const Business = ()=>{
                             <div className="rounded border">
                                 <h1 className="text-center">{input1}</h1>
                                 <h6 className="text-center">NTN # {input3}</h6>
+                                {/* <Dashboard name = { input1 } ntn={input3}/> */}
+                                
                             </div>
                             <h5 className="text-center mt-1">Sales Receipt</h5>
                             <div className="border rounded px-3">
@@ -68,3 +85,5 @@ export const Business = ()=>{
         </>
     )
 }
+
+export {businessName,ntnNumber};
