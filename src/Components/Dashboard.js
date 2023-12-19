@@ -2,10 +2,15 @@ import React, { useContext} from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../assets/css/Dashboard.css';
 import { store } from '../store/store';
-
+import { useHistory } from 'react-router-dom';
 
 
 export const Dashboard=() => {
+    const history = useHistory(); // Initialize useHistory
+    const handleDashboard = () => {
+        history.push('/Reciept');
+    }
+    
      
     var total = 0;
     const { input1, input3 } = useContext(store);
@@ -28,14 +33,10 @@ export const Dashboard=() => {
                             <td className="table_header">Price</td>
                         </tr>
                     </table>
-
-                        {/* const handlePrint = () => {
-                            window.print();
-                        }; */}
                     
                 </div>
                 <div className="container total_div pt-3"><p>Total:</p><p>{total}</p> </div>
-                <button className="dash_btn">Generate Receipt</button>
+                <button onClick={handleDashboard} className="dash_btn">Generate Receipt</button>
                 <button className="dash_btn">Add More Items</button>
                 
                 

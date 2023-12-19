@@ -1,7 +1,7 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../assets/css/Product.css';
-import { Link, useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 export const Product = ()=>{
     const history = useHistory(); // Initialize useHistory
     const handleProduct = () => {
