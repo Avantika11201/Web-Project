@@ -54,7 +54,7 @@ const ntnNumber = createContext();
 
     return(
         <>
-            <div className="container">
+            <div className="container mainDiv">
                 <div className="row">
                     <div className="col">
                         <form className=" mb-5 business_form">
