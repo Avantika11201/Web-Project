@@ -1,8 +1,12 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../assets/css/Product.css';
-
+import { Link, useHistory } from "react-router-dom/cjs/react-router-dom.min";
 export const Product = ()=>{
+    const history = useHistory(); // Initialize useHistory
+    const handleProduct = () => {
+        history.push('/Dashboard');
+    }
     return(
         <div className="container product_area">
             <form className=" mb-5 product_form">
@@ -15,7 +19,7 @@ export const Product = ()=>{
                 
                 <div>
                     <button>Add Product</button>
-                    <button>Next</button>
+                    <button onClick={handleProduct}>Next</button>
                 </div>      
             </form>
         </div>

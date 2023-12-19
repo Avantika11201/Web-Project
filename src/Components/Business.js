@@ -4,11 +4,17 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 //import { Dashboard } from "./Dashboard";
 import { useContext } from "react";
 import { store } from "../store/store";
+import { Link , useHistory } from 'react-router-dom';
 
 
 const businessName= createContext();
 const ntnNumber = createContext();
  export const Business = ()=>{
+
+    const history = useHistory(); // Initialize useHistory
+    const handleBusiness = () => {
+        history.push('/Product');
+    }
 
     const { setInputs } = useContext(store);
 
@@ -59,7 +65,7 @@ const ntnNumber = createContext();
                             <input type="text" onChange={field4} required placeholder="Invoice #" />
                             <input type="text" onChange={field5} required placeholder="Operator Name" />
                             <input type="text" onChange={field6} required placeholder="Client Type" />
-                            <button>Next</button>
+                            <button onClick={handleBusiness}>Next</button>
                         </form>
                     </div>
                     <div className="col">
