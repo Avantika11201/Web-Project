@@ -1,52 +1,43 @@
 *{
     font-family: 'karla';
 }
-.dashboard_from {
+.dashboard_form {
     background-color: #F6FBF9;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 50px 50px;
-    margin: 130px auto;
+    border-radius: 15px;
     width: fit-content;
-    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
 }
-input{
-    width: 450px;
-    height: 40px;
-    border-radius: 8px;
-    padding: 8px;
-    font-weight: 400;
-    font-size: 19px;
-    font-family: 'karla';
-    line-height: 19.5px;
-    border: 0.05px solid rgb(163, 158, 158);
-    margin-top: 18px;
-}
-.agreement_text{
-    margin-top: -33px;
-    margin-left: -80px;
-}
-input[type="checkbox"]{
-    width: 15px;
-    margin: 0;
-    padding: 0;
-    display: inline;
-    align-self: flex-start;
-}
-button{
+
+.dash_btn{
     line-height: 43.87px;
-    font-size: 20.75px;
-    width: 220px;
+    font-size: 16.75px;
     background-color: #84C7AE;
-    color: white;
-    border-radius: 16px;
-    font-weight: 700;
     font-family: 'karla';
 }
-.signin_link{
-    margin-top: 20px;
-    color: #32403B;
-    margin-bottom: 0;
+.title_table{
+    background-color: #84C7AE;
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    padding: 5px;
+    
+}
+.table_header{
+    margin-right: 30px;
+    margin-left: 10px;
+}
+.total_div{
+    font-size: 22px;
+    font-family: 'karla';
+    font-weight: 900;   
+    background-color: #84C7AE;
+    margin-top: 40px;
+    color: white;   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
 }
