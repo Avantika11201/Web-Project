@@ -14,11 +14,11 @@ const App = () => {
       <Switch>
         <Route path="/signup" component={Signup} />
         <Route path="/signin" component={Signin} />
+        <Route path="/Business" component={Business} />
+        <Route path="/Product" component={Product} />
+        <Route path="/Dashboard" component={Dashboard} />
         <Redirect from="/" to="/signup" />
       </Switch>
-      <Business />
-      <Product />
-      <Dashboard />
     </Router>
     
   );

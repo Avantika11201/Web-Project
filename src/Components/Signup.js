@@ -13,9 +13,7 @@ const Signup = ({ history }) => {
   const [agreement, setAgreement] = useState(false);
 
   const handleSignup = () => {
-    // Perform signup logic here
-    // You can add validation, API calls, etc.
-
+    
     // Redirect to the signin page after successful signup
     history.push('/signin');
   };
