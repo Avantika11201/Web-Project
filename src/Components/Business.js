@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 //import { Dashboard } from "./Dashboard";
 import { useContext } from "react";
 import { store } from "../store/store";
-import { Link , useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 
 const businessName= createContext();
